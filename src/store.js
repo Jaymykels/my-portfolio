@@ -32,7 +32,7 @@ export default new Vuex.Store({
         company: "INTERSWITCH",
         position: "Software Engineer",
         responsibilities:
-          "Worked on design, implementaion and application development, creating user interfaces that reflect the business requirement and satifies the system requirement specification."
+          "Design, implementaion and application development. Creating user interfaces that reflect the business requirement and satifies the system requirement specification."
       },
       {
         period: "2017 - 2018",
@@ -58,17 +58,18 @@ export default new Vuex.Store({
           "Graduated from the department of Computer Science University of Ibadan."
       },
       {
-        period: "MAY 2014 - MAY 2015",
-        institution: "EDUCATION ADVANCEMENT CENTER (EAC)",
+        period: "2014 - 2015",
+        institution: "EAC",
         degree: "CAMBRIDGE A LEVELS CERTIFICATE",
-        summary: "Completed the Cambridge A Level examination."
+        summary:
+          "Completed the Cambridge A Level examination of Mathemetics, Physics and Chemistry."
       },
       {
-        period: "SEPTEMBER 2006 - SEPTEMBER 2009",
+        period: "2006 - 2009",
         institution: "SAINT MARYS COLLEGE",
-        degree: "SENIOR SECONDARY SCHOOL CERTIFICATE",
+        degree: "WASSCE / SSCE",
         summary:
-          "Completed the West African Senior Secondary School O Level Certificate examination."
+          "Completed the West African Senior Secondary School O Level Certificate examination as a science student."
       }
     ],
     technical_skills: [

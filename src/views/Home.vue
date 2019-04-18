@@ -38,7 +38,7 @@
 
       <experience :professional_experience="professional_experience" />
 
-      <education />
+      <education :education="education" />
 
       <skills />
 
