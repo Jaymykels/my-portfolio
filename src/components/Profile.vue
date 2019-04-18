@@ -22,11 +22,7 @@
           <div class="col-md-5">
             <div class="profile-image">
               <div class="image-wraper display-inline-block position-relative">
-                <img
-                  src="@/assets/images/profile.jpg"
-                  alt=""
-                  class="img-responsive"
-                />
+                <img :src="avatar" alt="" class="img-responsive" />
               </div>
               <!-- //.image-wrapper -->
             </div>
@@ -40,42 +36,42 @@
                 <ul class="list-unstyled text-small text-uppercase">
                   <li>
                     <label class="background-color text-white">Name</label>
-                    <span class="font-family-alt text-medium">Andy Noya</span>
+                    <span class="font-family-alt text-medium">{{
+                      fullname
+                    }}</span>
                   </li>
 
                   <li>
                     <label class="background-color text-white">Birthday</label>
-                    <span class="font-family-alt text-medium"
-                      >17 August, 1985</span
-                    >
+                    <span class="font-family-alt text-medium">{{ DOB }}</span>
                   </li>
 
                   <li>
                     <label class="background-color text-white">Address</label>
-                    <span class="font-family-alt text-medium"
-                      >Jl. Wastukencana No. 2 Bandung, 41373</span
-                    >
+                    <span class="font-family-alt text-medium">{{
+                      address
+                    }}</span>
                   </li>
 
                   <li>
                     <label class="background-color text-white">Phone</label>
-                    <span class="font-family-alt text-medium"
-                      >+62 1234 56 78</span
-                    >
+                    <span class="font-family-alt text-medium">{{
+                      mobile
+                    }}</span>
                   </li>
 
                   <li>
                     <label class="background-color text-white">Email</label>
-                    <span class="font-family-alt text-medium"
-                      >hello@noya.com</span
-                    >
+                    <span class="font-family-alt text-medium">{{ email }}</span>
                   </li>
 
                   <li>
                     <label class="background-color text-white"
                       >Nationality</label
                     >
-                    <span class="font-family-alt text-medium">Indonesia</span>
+                    <span class="font-family-alt text-medium">{{
+                      nationality
+                    }}</span>
                   </li>
                 </ul>
               </div>
@@ -86,7 +82,7 @@
             <!-- //.profile-detail -->
 
             <div class="btn-resume-download text-center position-relative">
-              <a href="#" class="display-block">
+              <a :href="resume" class="display-block">
                 <i
                   class="ion-ios-download-outline background-color btn-shadow display-inline-block text-white title-large position-absolute"
                 ></i>
@@ -108,3 +104,34 @@
   </section>
   <!-- //SECTION - PROFILE END -->
 </template>
+
+<script>
+export default {
+  props: {
+    avatar: {
+      type: String
+    },
+    fullname: {
+      type: String
+    },
+    DOB: {
+      type: String
+    },
+    address: {
+      type: String
+    },
+    mobile: {
+      type: String
+    },
+    email: {
+      type: String
+    },
+    nationality: {
+      type: String
+    },
+    resume: {
+      type: String
+    }
+  }
+};
+</script>

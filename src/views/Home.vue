@@ -30,7 +30,16 @@
         :contract="contract"
       />
 
-      <profile />
+      <profile
+        :avatar="avatar"
+        :fullname="fullname"
+        :DOB="DOB"
+        :address="address"
+        :mobile="mobile"
+        :email="email"
+        :nationality="nationality"
+        :resume="resume"
+      />
 
       <services />
 
