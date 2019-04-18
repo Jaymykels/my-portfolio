@@ -17,10 +17,12 @@
             <p
               class="margin-2-5 no-margin-bottom no-margin-rl title-extra-large-3"
             >
-              I'm <span class="text-color">Andy Noya</span> a Creative Front-end
-              Developer with 8+ years of professional experience, currently
-              living <span class="text-color">and</span> working in
-              <span class="text-color">Bandung</span>.
+              I'm <span class="text-color">{{ fullname }}</span> a
+              {{ occupation }} with {{ years_experience }} years of professional
+              experience, currently living
+              <span class="text-color">and</span> working in
+              <span class="text-color">{{ location }}</span
+              >.
             </p>
 
             <p
@@ -28,7 +30,7 @@
             >
               In the last few years I worked and
               <span class="text-color">collaborated</span> with agencies such as
-              Urban Studio, Martabak, Siomay & many more.
+              {{ agencies }} & many more.
             </p>
           </div>
           <!-- //.col-md-12 -->
@@ -41,3 +43,30 @@
   </section>
   <!-- //SECTION - INTRODUCTION END -->
 </template>
+
+<script>
+export default {
+  props: {
+    fullname: {
+      type: String
+    },
+    occupation: {
+      type: String
+    },
+    years_experience: {
+      type: String
+    },
+    location: {
+      type: String
+    },
+    contract: {
+      type: Array
+    }
+  },
+  computed: {
+    agencies() {
+      return this.contract.join(", ");
+    }
+  }
+};
+</script>

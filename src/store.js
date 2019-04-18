@@ -17,7 +17,7 @@ export default new Vuex.Store({
     nationality: "Nigerian",
     resume:
       "https://www.dropbox.com/s/bfqn530eiu49tqn/Michael%20Ezeokoye.pdf?dl=0",
-    contract: ["Foodlocker", "Vinsight", "Stears"],
+    contract: ["Foodlocker", "FMG", "Stears"],
     skills: [
       "Requirement Analysis",
       "System Architecture",

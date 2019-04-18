@@ -22,7 +22,13 @@
       </section>
       <!-- //SECTION - HOME END -->
 
-      <introduction />
+      <introduction
+        :fullname="fullname"
+        :occupation="occupation"
+        :years_experience="years_experience"
+        :location="location"
+        :contract="contract"
+      />
 
       <profile />
 
@@ -47,29 +53,27 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  data() {
-    return {
-      ...mapState([
-        "avatar",
-        "fullname",
-        "DOB",
-        "occupation",
-        "years_experience",
-        "mobile",
-        "email",
-        "address",
-        "location",
-        "nationality",
-        "resume",
-        "contract",
-        "skills",
-        "professional_experience",
-        "education",
-        "technical_skills",
-        "projects",
-        "work_process"
-      ])
-    };
+  computed: {
+    ...mapState([
+      "avatar",
+      "fullname",
+      "DOB",
+      "occupation",
+      "years_experience",
+      "mobile",
+      "email",
+      "address",
+      "location",
+      "nationality",
+      "resume",
+      "contract",
+      "skills",
+      "professional_experience",
+      "education",
+      "technical_skills",
+      "projects",
+      "work_process"
+    ])
   }
 };
 </script>
