@@ -40,7 +40,7 @@
 
       <education :education="education" />
 
-      <skills />
+      <skills :technical_skills="technical_skills" />
 
       <projects />
 
