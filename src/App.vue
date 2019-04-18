@@ -18,7 +18,7 @@
           <div class="display-table-cell vertical-align-middle">
             <span
               class="display-inline-block font-weight-700 title-large position-relative"
-              >N</span
+              >ME</span
             >
           </div>
           <!-- //.display-table-cell -->
@@ -70,11 +70,6 @@
               <li>
                 <a href="#" target="_blank"
                   ><i class="ion-social-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#" target="_blank"
-                  ><i class="ion-social-dribbble"></i
                 ></a>
               </li>
               <li>
@@ -133,11 +128,6 @@
               </li>
               <li>
                 <a href="#" target="_blank"
-                  ><i class="ion-social-dribbble"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#" target="_blank"
                   ><i class="ion-social-github"></i
                 ></a>
               </li>
@@ -149,11 +139,8 @@
             </ul>
 
             <p class="font-family-alt text-medium">
-              <strong>&copy; 2016</strong> Noya &mdash; One Page Personal Theme.
-              <strong>Developed</strong> by Andy Noya.
-            </p>
-            <p class="font-family-alt text-medium">
-              <strong>Design</strong> by Noya Studio.
+              <strong>&copy; 2019</strong>
+              <strong> Developed</strong> by Michael Ezeokoye.
             </p>
           </div>
           <!-- //.col-md-12 -->
@@ -164,3 +151,14 @@
     </footer>
   </div>
 </template>
+
+<script>
+import { mapState } from "vuex";
+export default {
+  data() {
+    return {
+      ...mapState(["email", "social_media"])
+    };
+  }
+};
+</script>
