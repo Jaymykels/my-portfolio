@@ -1,5 +1,4 @@
 <template>
-  <!-- SECTION - PROFILE START -->
   <section id="profile" class="section no-padding-bottom">
     <div class="section-content">
       <div class="container">
@@ -12,11 +11,8 @@
                 Personal Info
               </h2>
             </div>
-            <!-- //.section-title -->
           </div>
-          <!-- //.col-md-12 -->
         </div>
-        <!-- //.row -->
 
         <div class="row">
           <div class="col-md-5">
@@ -24,11 +20,8 @@
               <div class="image-wraper display-inline-block position-relative">
                 <img :src="avatar" alt="" class="img-responsive" />
               </div>
-              <!-- //.image-wrapper -->
             </div>
-            <!-- //.profile-image -->
           </div>
-          <!-- //.col-md-5 -->
 
           <div class="col-md-7">
             <div class="profile-detail position-relative width-100">
@@ -75,11 +68,9 @@
                   </li>
                 </ul>
               </div>
-              <!-- //.inner-content -->
 
               <span class="line"></span>
             </div>
-            <!-- //.profile-detail -->
 
             <div class="btn-resume-download text-center position-relative">
               <a :href="resume" class="display-block">
@@ -92,17 +83,11 @@
                 >
               </a>
             </div>
-            <!-- //.btn-resume-download -->
           </div>
-          <!-- //.col-md-7 -->
         </div>
-        <!-- //.row -->
       </div>
-      <!-- //.container -->
     </div>
-    <!-- //.section-content -->
   </section>
-  <!-- //SECTION - PROFILE END -->
 </template>
 
 <script>

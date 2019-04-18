@@ -1,8 +1,6 @@
 <template>
   <div>
-    <!-- WRAPPER START -->
     <div class="wrapper">
-      <!-- SECTION - HOME START -->
       <section id="home" class="section display-table no-padding-tb width-100">
         <div class="section-content display-table-cell vertical-align-middle">
           <div class="container">
@@ -12,15 +10,10 @@
                   <span class="text-color">Hello</span> world.<br />
                 </h2>
               </div>
-              <!-- //.col-md-12 -->
             </div>
-            <!-- //.row -->
           </div>
-          <!-- //.container -->
         </div>
-        <!-- //.section-content -->
       </section>
-      <!-- //SECTION - HOME END -->
 
       <introduction
         :fullname="fullname"
@@ -41,7 +34,7 @@
         :resume="resume"
       />
 
-      <services />
+      <services :services="skills" />
 
       <experience />
 
@@ -55,7 +48,6 @@
 
       <contact />
     </div>
-    <!-- //WRAPPER END -->
   </div>
 </template>
 

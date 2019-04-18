@@ -1,5 +1,4 @@
 <template>
-  <!-- SECTION - INTRODUCTION START -->
   <section id="introduction" class="section no-padding-tb">
     <div class="section-content">
       <div class="container">
@@ -12,7 +11,6 @@
                 Introduction
               </h2>
             </div>
-            <!-- //.section-title -->
 
             <p
               class="margin-2-5 no-margin-bottom no-margin-rl title-extra-large-3"
@@ -33,15 +31,10 @@
               {{ agencies }} & many more.
             </p>
           </div>
-          <!-- //.col-md-12 -->
         </div>
-        <!-- //.row -->
       </div>
-      <!-- //.container -->
     </div>
-    <!-- //.section-content -->
   </section>
-  <!-- //SECTION - INTRODUCTION END -->
 </template>
 
 <script>

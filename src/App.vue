@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- BACKGROUND GRID START -->
     <div class="background-grid height-100 position-fixed">
       <span class="column height-100"></span>
       <span class="column height-100"></span>
@@ -9,9 +8,7 @@
       <span class="column height-100 hidden-xs hidden-sm"></span>
       <span class="column height-100 hidden-xs hidden-sm"></span>
     </div>
-    <!-- //BACKGROUND GRID END -->
 
-    <!-- HEADER START -->
     <header class="header">
       <div class="logo btn-shadow text-center">
         <div class="display-table height-100 width-100">
@@ -21,11 +18,8 @@
               >ME</span
             >
           </div>
-          <!-- //.display-table-cell -->
         </div>
-        <!-- //.display-table -->
       </div>
-      <!-- //.logo -->
 
       <div class="nav-trigger nav-trigger-open">
         <div class="nav-toggle">
@@ -33,13 +27,9 @@
           <span></span>
           <span></span>
         </div>
-        <!-- //.nav-toggle -->
       </div>
-      <!-- //.nav-trigger -->
     </header>
-    <!-- //HEADER END -->
 
-    <!-- NAVIGATION START -->
     <div id="navigation" class="navbar navbar-display-block" role="navigation">
       <div class="container-fluid display-table height-100 width-100">
         <div class="display-table-cell vertical-align-middle width-100">
@@ -47,7 +37,6 @@
             <span></span>
             <span></span>
           </div>
-          <!-- //.nav-trigger -->
 
           <ul class="nav navbar-nav text-center text-small text-uppercase">
             <li class="page-scroll"><a href="#home">Home</a></li>
@@ -56,7 +45,6 @@
             <li class="page-scroll"><a href="#skills-bar-chart">Skills</a></li>
             <li class="page-scroll"><a href="#contact">Contact</a></li>
           </ul>
-          <!-- //.navbar-nav -->
 
           <div class="nav-social hidden-md hidden-lg text-center">
             <ul
@@ -84,19 +72,14 @@
               </li>
             </ul>
 
-            <span class="display-inline-block text-large">{{email}}</span>
+            <span class="display-inline-block text-large">{{ email }}</span>
           </div>
-          <!-- //.nav-social -->
         </div>
-        <!-- //.display-table-cell -->
       </div>
-      <!-- //.container-fluid -->
     </div>
-    <!-- //NAVIGATION END -->
 
     <router-view />
 
-    <!-- FOOTER START -->
     <footer class="footer position-relative">
       <div
         class="page-scroll background-color display-block position-absolute text-center"
@@ -108,7 +91,6 @@
           <i class="ion-chevron-up"></i>
         </a>
       </div>
-      <!-- //.page-scroll -->
 
       <div class="container">
         <div class="row">
@@ -143,11 +125,8 @@
               <strong> Developed</strong> by Michael Ezeokoye.
             </p>
           </div>
-          <!-- //.col-md-12 -->
         </div>
-        <!-- //.row -->
       </div>
-      <!-- //.container -->
     </footer>
   </div>
 </template>
