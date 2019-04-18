@@ -46,7 +46,7 @@
 
       <process :work_process="work_process" />
 
-      <contact />
+      <contact :email="email" :mobile="mobile" :address="address" />
     </div>
   </div>
 </template>

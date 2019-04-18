@@ -12,7 +12,6 @@
                 Get in Touch
               </h2>
             </div>
-            <!-- //.section-title -->
 
             <div class="contact position-relative width-100">
               <div class="col col-1">
@@ -36,11 +35,8 @@
                       Have a good day!
                     </p>
                   </div>
-                  <!-- //.display-table-cell -->
                 </div>
-                <!-- //.display-table -->
               </div>
-              <!-- //.col -->
 
               <div class="col col-2">
                 <div class="display-table height-100">
@@ -59,12 +55,11 @@
                         </h4>
 
                         <ul class="font-family-alt list-unstyled text-medium">
-                          <li>Jl. Wastu Kencana No. 2</li>
-                          <li>Bandung, 41373</li>
-                          <li>Indonesia</li>
+                          <li v-for="(item, index) in myaddress" :key="index">
+                            {{ item }}
+                          </li>
                         </ul>
                       </div>
-                      <!-- //.address -->
 
                       <div class="contact-info pull-right">
                         <h4
@@ -74,30 +69,40 @@
                         </h4>
 
                         <ul class="font-family-alt list-unstyled text-medium">
-                          <li>hello@noya.com</li>
-                          <li>T / +62 1234 56 78</li>
-                          <li>andynoya@gmail.com</li>
+                          <li>{{ email }}</li>
+                          <li>{{ mobile }}</li>
                         </ul>
                       </div>
-                      <!-- //.address -->
                     </div>
-                    <!-- //.contact-detail -->
                   </div>
-                  <!-- //.display-table-cell -->
                 </div>
-                <!-- //.display-table -->
               </div>
-              <!-- //.col -->
             </div>
-            <!-- //.contact -->
           </div>
-          <!-- //.col-md-12 -->
         </div>
-        <!-- //.row -->
       </div>
-      <!-- //.container -->
     </div>
-    <!-- //.section-content -->
   </section>
-  <!-- //SECTION - CONTACT END -->
 </template>
+
+<script>
+export default {
+  props: {
+    email: {
+      type: String
+    },
+    address: {
+      type: String
+    },
+    mobile: {
+      type: String
+    }
+  },
+  computed: {
+    myaddress() {
+      const address = this.address;
+      return address.split(",");
+    }
+  }
+};
+</script>

@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    avatar: "https://avatars3.githubusercontent.com/u/14936299?s=460&v=4",
+    avatar: "/img/avatar.jpeg",
     fullname: "Michael Ezeokoye",
     DOB: "15th May 1993",
     occupation: "Software Engineer",

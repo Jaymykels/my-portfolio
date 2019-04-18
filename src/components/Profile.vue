@@ -73,7 +73,7 @@
             </div>
 
             <div class="btn-resume-download text-center position-relative">
-              <a :href="resume" class="display-block">
+              <a :href="resume" class="display-block" target="_blank">
                 <i
                   class="ion-ios-download-outline background-color btn-shadow display-inline-block text-white title-large position-absolute"
                 ></i>

@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="section-title text-center">
+            <div class="section-title">
               <h2
                 class="font-weight-700 has-sideline letter-spacing-1 text-medium text-uppercase"
               >
