@@ -36,7 +36,7 @@
 
       <services :services="skills" />
 
-      <experience />
+      <experience :professional_experience="professional_experience" />
 
       <education />
 

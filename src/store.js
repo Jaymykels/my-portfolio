@@ -17,7 +17,7 @@ export default new Vuex.Store({
     nationality: "Nigerian",
     resume:
       "https://www.dropbox.com/s/bfqn530eiu49tqn/Michael%20Ezeokoye.pdf?dl=0",
-    contract: ["Foodlocker", "FMG", "Stears"],
+    contract: ["Trace Media", "Folio Media Group", "Stears"],
     skills: [
       "Requirement Analysis",
       "System Architecture",
@@ -28,21 +28,21 @@ export default new Vuex.Store({
     ],
     professional_experience: [
       {
-        period: "DEC 2018 - PRESENT",
+        period: "2018 - PRESENT",
         company: "INTERSWITCH",
         position: "Software Engineer",
         responsibilities:
           "Worked on design, implementaion and application development, creating user interfaces that reflect the business requirement and satifies the system requirement specification."
       },
       {
-        period: "FEBRUARY 2018 - SEPTEMBER 2018",
+        period: "2017 - 2018",
         company: "CREDIT CLAN",
         position: "Software Engineer",
         responsibilities:
           "Seeing out a project from conception to final product, by developing and designing web applications and ensuring their responsiveness and ability to scale."
       },
       {
-        period: "MAY 2016 - JANUARY 2017",
+        period: "2016 - 2017",
         company: "GLOBAL INFO SWIFT",
         position: "Software Engineer",
         responsibilities:
@@ -51,7 +51,7 @@ export default new Vuex.Store({
     ],
     education: [
       {
-        period: "JULY 2015 - FEBRUARY 2018",
+        period: "2015 - 2018",
         institution: "UNIVERSITY OF IBADAN",
         degree: "BACHELORS DEGREE",
         summary:
