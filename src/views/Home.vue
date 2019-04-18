@@ -44,7 +44,7 @@
 
       <projects :projects="projects" />
 
-      <process />
+      <process :work_process="work_process" />
 
       <contact />
     </div>

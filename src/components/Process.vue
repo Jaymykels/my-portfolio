@@ -12,108 +12,39 @@
                 Work Process
               </h2>
             </div>
-            <!-- //.section-title -->
 
             <div class="work-process position-relative text-center width-100">
-              <div class="item display-inline-block position-relative">
+              <div
+                class="item display-inline-block position-relative"
+                v-for="(process, index) in work_process"
+                :key="index"
+              >
                 <span
                   class="circle height-100 position-absolute width-100"
+                  :class="[(index + 1) % 2 === 0 && 'display-table rotate-180']"
                 ></span>
 
                 <div class="display-table height-100 width-100">
                   <label
                     class="display-table-cell font-weight-700 text-center text-medium text-uppercase vertical-align-middle"
-                    >01.<br />idea</label
+                    >0{{ index + 1 }}.<br />{{ process }}</label
                   >
                 </div>
-                <!-- //.display-table -->
               </div>
-              <!-- //.item -->
-
-              <div class="item display-inline-block position-relative">
-                <span
-                  class="circle display-table height-100 position-absolute rotate-180 width-100"
-                ></span>
-
-                <div class="display-table height-100 width-100">
-                  <label
-                    class="display-table-cell font-weight-700 text-center text-medium text-uppercase vertical-align-middle"
-                    >02.<br />sketch</label
-                  >
-                </div>
-                <!-- //.display-table -->
-              </div>
-              <!-- //.item -->
-
-              <div class="item display-inline-block position-relative">
-                <span
-                  class="circle height-100 position-absolute width-100"
-                ></span>
-
-                <div class="display-table height-100 width-100">
-                  <label
-                    class="display-table-cell font-weight-700 text-center text-medium text-uppercase vertical-align-middle"
-                    >03.<br />design</label
-                  >
-                </div>
-                <!-- //.display-table -->
-              </div>
-              <!-- //.item -->
-
-              <div class="item display-inline-block position-relative">
-                <span
-                  class="circle display-table height-100 position-absolute rotate-180 width-100"
-                ></span>
-
-                <div class="display-table height-100 width-100">
-                  <label
-                    class="display-table-cell font-weight-700 text-center text-medium text-uppercase vertical-align-middle"
-                    >04.<br />develop</label
-                  >
-                </div>
-                <!-- //.display-table -->
-              </div>
-              <!-- //.item -->
-
-              <div class="item display-inline-block position-relative">
-                <span
-                  class="circle height-100 position-absolute width-100"
-                ></span>
-
-                <div class="display-table height-100 width-100">
-                  <label
-                    class="display-table-cell font-weight-700 text-center text-medium text-uppercase vertical-align-middle"
-                    >05.<br />test</label
-                  >
-                </div>
-                <!-- //.display-table -->
-              </div>
-              <!-- //.item -->
-
-              <div class="item display-inline-block position-relative">
-                <span
-                  class="circle display-table height-100 position-absolute rotate-180 width-100"
-                ></span>
-
-                <div class="display-table height-100 width-100">
-                  <label
-                    class="display-table-cell font-weight-700 text-center text-medium text-uppercase vertical-align-middle"
-                    >06.<br />launch</label
-                  >
-                </div>
-                <!-- //.display-table -->
-              </div>
-              <!-- //.item -->
             </div>
-            <!-- //.work-process -->
           </div>
-          <!-- //.col-md-12 -->
         </div>
-        <!-- //.row -->
       </div>
-      <!-- //.container -->
     </div>
-    <!-- //.section-content -->
   </section>
-  <!-- //SECTION - WORK PROCESS END -->
 </template>
+
+<script>
+export default {
+  props: {
+    work_process: {
+      type: Array
+    }
+  }
+};
+</script>
