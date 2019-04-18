@@ -137,28 +137,28 @@ export default new Vuex.Store({
     projects: [
       {
         title: "STEARS ELECTION CENTER",
-        image: "@/assets/images/projects/stears.png",
+        image: "/img/projects/stears.png",
         description:
           "A platform that gives insight into the Nigeria Elections conducted by the Independent National Electoral Commission of Nigeria.",
         link: "https://nigeriaelections.stearsng.com"
       },
       {
         title: "FOODLOCKER",
-        image: "@/assets/images/projects/foodlocker.png",
+        image: "/img/projects/foodlocker.png",
         description:
           "AN E-commerce web application with an Inventory management system an POS for a Food Mart.",
         link: "https://www.foodlocker.com.ng"
       },
       {
-        title: "DECISSION SUPPORT SYSTEM FOR A SCHOOL (PROTOTYPE)",
-        image: "@/assets/images/projects/dsssapa.png",
+        title: "UNIVERSITY DSS (PROTOTYPE)",
+        image: "/img/projects/dsssapa.png",
         description:
           "A decission support system for student academics performace analytics that processes academic result and predicts academic performance.",
         link: "https://dsssapa.herokuapp.com"
       },
       {
-        title: "FOLIO MEDIA GROUP (PROTOTYPE)",
-        image: "@/assets/images/projects/folio.png",
+        title: "FOLIO NEWS (PROTOTYPE)",
+        image: "/img/projects/folio.png",
         description:
           "A platform that keeps you updates with the latest news around with video content and advertisement.",
         link: "http://folio.techbrarysolutions.com"

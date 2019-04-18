@@ -42,7 +42,7 @@
 
       <skills :technical_skills="technical_skills" />
 
-      <projects />
+      <projects :projects="projects" />
 
       <process />
 
