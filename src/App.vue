@@ -63,28 +63,28 @@
               class="list-unstyled list-inline no-letter-spacing title-medium"
             >
               <li>
-                <a href="#" target="_blank"
+                <a :href="social_media.facebook" target="_blank"
                   ><i class="ion-social-facebook"></i
                 ></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a :href="social_media.twitter" target="_blank"
                   ><i class="ion-social-twitter"></i
                 ></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a :href="social_media.github" target="_blank"
                   ><i class="ion-social-github"></i
                 ></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a :href="social_media.linkedin" target="_blank"
                   ><i class="ion-social-linkedin"></i
                 ></a>
               </li>
             </ul>
 
-            <span class="display-inline-block text-large">hello@noya.com</span>
+            <span class="display-inline-block text-large">{{email}}</span>
           </div>
           <!-- //.nav-social -->
         </div>
@@ -117,22 +117,22 @@
               class="list-unstyled list-inline margin-2 no-margin-top no-margin-rl no-letter-spacing title-medium"
             >
               <li>
-                <a href="#" target="_blank"
+                <a :href="social_media.facebook" target="_blank"
                   ><i class="ion-social-facebook"></i
                 ></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a :href="social_media.twitter" target="_blank"
                   ><i class="ion-social-twitter"></i
                 ></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a :href="social_media.github" target="_blank"
                   ><i class="ion-social-github"></i
                 ></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a :href="social_media.linkedin" target="_blank"
                   ><i class="ion-social-linkedin"></i
                 ></a>
               </li>
@@ -155,10 +155,8 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  data() {
-    return {
-      ...mapState(["email", "social_media"])
-    };
+  computed: {
+    ...mapState(["email", "social_media"])
   }
 };
 </script>
