@@ -1,0 +1,20 @@
+import Vue from "vue";
+import Contact from "./components/Contact.vue";
+import Education from "./components/Education.vue";
+import Experience from "./components/Experience.vue";
+import Introduction from "./components/Introduction.vue";
+import Process from "./components/Process.vue";
+import Profile from "./components/Profile.vue";
+import Projects from "./components/Projects.vue";
+import Services from "./components/Services.vue";
+import Skills from "./components/Skills.vue";
+
+Vue.component("contact", Contact);
+Vue.component("education", Education);
+Vue.component("experience", Experience);
+Vue.component("introduction", Introduction);
+Vue.component("process", Process);
+Vue.component("profile", Profile);
+Vue.component("projects", Projects);
+Vue.component("services", Services);
+Vue.component("skills", Skills);

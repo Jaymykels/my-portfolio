@@ -5,13 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>vue-tailwind</title>
+    <!-- Loading Bootstrap CSS -->
+    <link href="<%= BASE_URL %>plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Loading Font Icons -->
+    <link href="<%= BASE_URL %>plugins/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Include all css plugins (below), or include individual files as needed -->
+    <link href="<%= BASE_URL %>plugins/jpreloader/css/jpreloader.css" rel="stylesheet" type="text/css">
+    
+    <!-- Main CSS -->
+    <link href="<%= BASE_URL %>css/styles.min.css" rel="stylesheet" type="text/css">
+    <title>Michael Ezeokoye</title>
   </head>
-  <body>
+  <body id="page-top">
     <noscript>
-      <strong>We're sorry but vue-tailwind doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>I'm sorry but my portfolio page doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <!-- Loading jQuery -->
+  <script src="<%= BASE_URL %>plugins/jquery/jquery.min.js"></script>
+  
+  <!-- Loading Bootstrap JS -->
+  <script src="<%= BASE_URL %>plugins/bootstrap/js/bootstrap.min.js"></script>
+  
+  <!-- Include all js plugins (below) -->
+  <script src="<%= BASE_URL %>plugins/jpreloader/js/jpreloader.min.js"></script>
+  <script src="<%= BASE_URL %>plugins/debouncer/debouncer.js"></script>
+  <script src="<%= BASE_URL %>plugins/easing/jquery.easing.min.js"></script>
+  
+  <!-- Loading Theme JS -->
+  <script src="<%= BASE_URL %>js/main.js"></script>
 </html>
