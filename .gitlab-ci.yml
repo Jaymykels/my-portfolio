@@ -1,0 +1,26 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+  
+before_script:
+   - apt-get update -yqqq
+   - apt-get install -y google-chrome-stable
+   - apt-get install -y xvfb
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - yarn
+  artifacts:
+    paths:
+      - node_modules/
+
+unit_e2e_test:
+  stage: test
+  script: yarn test
