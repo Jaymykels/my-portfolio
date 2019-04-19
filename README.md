@@ -1,4 +1,4 @@
-# vue-tailwind
+# Portfolio
 
 ## Project setup
 ```
@@ -33,6 +33,16 @@ yarn run test:e2e
 ### Run your unit tests
 ```
 yarn run test:unit
+```
+
+### Build docker image
+```
+docker build . -t portfolio
+```
+
+### Run docker image
+```
+docker run -d -p 8080:80 portfolio
 ```
 
 ### Customize configuration

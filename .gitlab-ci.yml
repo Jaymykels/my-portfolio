@@ -3,6 +3,7 @@ image: node:latest
 stages:
   - build
   - test
+  - deploy
 
 cache:
   paths:
@@ -19,3 +20,10 @@ install_dependencies:
 unit_e2e_test:
   stage: test
   script: yarn test
+
+deploy:
+  stage: deploy
+  script:
+    - docker build . -t portfolio
+    - docker run -d -p 8080:80 portfolio
+  when: manual
