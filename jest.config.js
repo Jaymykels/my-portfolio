@@ -15,8 +15,4 @@ module.exports = {
     "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
   ],
   testURL: "http://localhost/",
-  watchPlugins: [
-    "C:\\Users\\chukwuemeka.ezeokoye\\Documents\\Code\\Vue\\vue-tailwind\\node_modules\\jest-watch-typeahead\\filename.js",
-    "C:\\Users\\chukwuemeka.ezeokoye\\Documents\\Code\\Vue\\vue-tailwind\\node_modules\\jest-watch-typeahead\\testname.js"
-  ]
 };
