@@ -9,6 +9,11 @@ cache:
   paths:
     - node_modules/
 
+.dind-build:
+  image: docker:stable
+  services:
+    - docker:dind
+
 install_dependencies:
   stage: build
   script:
@@ -23,6 +28,7 @@ unit_e2e_test:
 
 deploy:
   stage: deploy
+  extends: .dind-build
   script:
     - docker build . -t portfolio
     - docker run -d -p 8080:80 portfolio
