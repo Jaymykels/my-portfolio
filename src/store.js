@@ -12,7 +12,7 @@ export default new Vuex.Store({
     years_experience: "5+",
     mobile: "+234 708 038 7486",
     email: "jaymykels69@gmail.com",
-    address: "Mobil Road Off Illaje, Ajah Lagos",
+    address: "Mobil Road Off Ilaje, Ajah Lagos",
     location: "Lagos",
     nationality: "Nigerian",
     resume:
@@ -23,7 +23,7 @@ export default new Vuex.Store({
       "System Architecture",
       "Project Management",
       "Programming",
-      "DevOps",
+      "Dev Ops",
       "Quality Assurance"
     ],
     professional_experience: [
