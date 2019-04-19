@@ -6,7 +6,7 @@ stages:
   
 before_script:
    - apt-get update -yqqq
-   - apt-get install -y google-chrome-stable
+   - apt-get install -y google-chrome-stable_current_amd64.deb
    - apt-get install -y xvfb
 
 cache:
