@@ -45,8 +45,8 @@ release:
     - "docker info"
     - "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
   script:
-    - "docker build -t ${CI_REGISTRY}/${CI_PROJECT_NAME}:latest --pull ."
-    - "docker push ${CI_REGISTRY}/${CI_PROJECT_NAME}:latest"
+    - "docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
+    - "docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest"
 
 deploy:
   stage: deploy
@@ -56,7 +56,7 @@ deploy:
   environment: production
   variables:
     DOCKER_CONTAINER_NAME: ${CI_PROJECT_NAME}
-    DOCKER_IMAGE_TAG: ${CI_REGISTRY}/${CI_PROJECT_NAME}:latest
+    DOCKER_IMAGE_TAG: ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest
   services:
     - docker:dind
   before_script:
