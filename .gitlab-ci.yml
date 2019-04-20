@@ -1,41 +1,72 @@
-image: docker
+cache:
+  key: "${CI_BUILD_REF_NAME} node:8-alpine"
+  paths:
+  - node_modules/
 
 stages:
   - build
   - test
+  - release
   - deploy
 
-cache:
-  paths:
-    - node_modules/
-
-before_script:
-  # Install node and some other deps
-  - sudo curl -sL https://deb.nodesource.com/setup_8.x | bash -
-  - sudo apt-get update -yq
-  - sudo apt-get install -y apt-transport-https build-essential cmake nodejs python-software-properties software-properties-common unzip
-  
-  # Install yarn
-  - sudo wget -q -O - https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-  - sudo echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
-  - sudo apt-get update -yq
-  - sudo apt-get install -y yarn
-
-install_dependencies:
+build:
   stage: build
-  script:
+  image: node:8-alpine
+  variables:
+    NODE_ENV: "development"
+  before_script:
+    - apk add --update bash
+    - apk add --update git && rm -rf /tmp/* /var/cache/apk/*
     - yarn
+  script:
+    - yarn build
   artifacts:
     paths:
-      - node_modules/
+     - public/
 
-unit_e2e_test:
+test:
   stage: test
-  script: yarn test
+  image: node:8-alpine
+  variables:
+    NODE_ENV: "test"
+  script:
+    - yarn test
+
+release:
+  stage: release
+  image: docker:latest
+  only:
+    - "master"
+  services:
+    - docker:dind
+  variables:
+    DOCKER_DRIVER: "overlay"
+before_script:
+    - docker version
+    - "docker info"
+    - "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
+  script:
+    - "docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
+    - "docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest"
+  after_script:
+    - "docker logout ${CI_REGISTRY}"
 
 deploy:
   stage: deploy
+  image: gitlab/dind:latest
+  only:
+    - "master"
+  environment: production
+  services:
+    - docker:dind
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo "$DEPLOY_SERVER_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - eval "$(ssh-agent -s)"
+    - ssh-add ~/.ssh/id_rsa
+    - ssh-keyscan -H $DEPLOYMENT_SERVER_IP >> ~/.ssh/known_hosts
   script:
-    - docker build . -t portfolio
-    - docker run -d -p 8080:80 portfolio
-  when: manual
+    - printf "DATABASE_URL=${DATABASE_URL}\nPORT=80\n" > environment.env
+    - scp -r ./environment.env ./docker-compose.autodeploy.yml root@${DEPLOYMENT_SERVER_IP}:~/
+    - ssh root@$DEPLOYMENT_SERVER_IP "docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}; docker-compose -f docker-compose.autodeploy.yml stop; docker-compose -f docker-compose.autodeploy.yml rm web --force; docker pull ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest; docker-compose -f docker-compose.autodeploy.yml up -d"
