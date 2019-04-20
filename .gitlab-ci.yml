@@ -47,6 +47,8 @@ release:
   script:
     - "docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
     - "docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest"
+  only:
+    - master
 
 deploy:
   stage: deploy
@@ -81,3 +83,6 @@ deploy:
     - ssh -T root@$DEPLOYMENT_SERVER_IP "docker ps -q --filter \"name=${DOCKER_CONTAINER_NAME}\" | grep -q . && docker stop ${DOCKER_CONTAINER_NAME} && docker rm -fv ${DOCKER_CONTAINER_NAME} && docker rmi -f ${DOCKER_IMAGE_TAG}; docker run -d -p 80:80 --name ${DOCKER_CONTAINER_NAME} ${DOCKER_IMAGE_TAG}"
   after_script:
     - "docker logout ${CI_REGISTRY}"
+  when: manual
+  only:
+    - master

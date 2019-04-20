@@ -45,5 +45,18 @@ docker build . -t portfolio
 docker run -d -p 8080:80 portfolio
 ```
 
+### Configure Digital Ocean Droplet
+```
+ssh root@yip
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub
+nano ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+cat ~/.ssh/id_rsa
+```
+Add private key and ip to gitlab variables as DEPLOY_SERVER_PRIVATE_KEY and DEPLOYMENT_SERVER_IP respectively
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
