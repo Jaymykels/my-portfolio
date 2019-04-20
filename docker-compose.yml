@@ -2,5 +2,3 @@ web:
   image: registry.gitlab.com/jaymykels69/my-portfolio:latest
   ports:
     - "80:80"
-  env_file:
-    - environment.env

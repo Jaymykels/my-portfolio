@@ -46,26 +46,42 @@ release:
     - "docker info"
     - "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
   script:
-    - "docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
+    - "docker build . -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
     - "docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest"
   after_script:
     - "docker logout ${CI_REGISTRY}"
 
 deploy:
   stage: deploy
-  image: gitlab/dind:latest
+  image: docker-compose:latest
   only:
     - "master"
   environment: production
+  variables:
+    DOCKER_CONTAINER_NAME: ${CI_PROJECT_NAME}
+    DOCKER_IMAGE_TAG: ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest
   services:
     - docker:dind
   before_script:
+    ## Install ssh agent (so we can access the Digital Ocean Droplet) and run it.
+    - apk update && apk add openssh-client
+    - eval $(ssh-agent -s)
+
+    ## Write the environment variable value to the agent store, create the ssh directory and give the right permissions to it.
+    - echo "$DEPLOY_SERVER_PRIVATE_KEY" | ssh-add -
     - mkdir -p ~/.ssh
-    - echo "$DEPLOY_SERVER_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-    - chmod 600 ~/.ssh/id_rsa
-    - eval "$(ssh-agent -s)"
-    - ssh-add ~/.ssh/id_rsa
-    - ssh-keyscan -H $DEPLOYMENT_SERVER_IP >> ~/.ssh/known_hosts
+    - chmod 700 ~/.ssh
+
+    ## Make sure that ssh will trust the new host, instead of asking
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+    ## Test that everything is setup correctly
+    - ssh -T root@$DEPLOYMENT_SERVER_IP
   script:
-    - scp -r ./environment.env ./docker-compose.yml root@${DEPLOYMENT_SERVER_IP}:~/
-    - ssh root@$DEPLOYMENT_SERVER_IP "docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}; docker-compose -f docker-compose.yml stop; docker-compose -f docker-compose.yml rm web --force; docker pull ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest; docker-compose -f docker-compose.yml up -d"
+    ## Login this machine into Docker registry, creates a production build and push it to the registry.
+    - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD}
+    
+    # Execute as follow:
+    # ssh -t digital-ocean-server "docker cmd1; docker cmd2;
+    ## Connect to the Digital Ocean droplet, stop/remove all running containers, pull latest image and execute it.
+    - ssh -T root@$DEPLOYMENT_SERVER_IP "docker ps -q --filter \"name=${DOCKER_CONTAINER_NAME}\" | grep -q . && docker stop ${DOCKER_CONTAINER_NAME} && docker rm -fv ${DOCKER_CONTAINER_NAME} && docker rmi -f ${DOCKER_IMAGE_TAG}; docker run -d -p 80:80 --name ${DOCKER_CONTAINER_NAME} ${DOCKER_IMAGE_TAG}"
