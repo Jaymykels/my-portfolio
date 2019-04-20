@@ -53,7 +53,7 @@ release:
 
 deploy:
   stage: deploy
-  image: docker-compose:latest
+  image: gitlab/dind:latest
   only:
     - "master"
   environment: production
