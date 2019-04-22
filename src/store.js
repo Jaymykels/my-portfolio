@@ -102,8 +102,8 @@ export default new Vuex.Store({
         percentage: 50
       },
       {
-        technology: "Flask",
-        percentage: 75
+        technology: "Django",
+        percentage: 60
       },
       {
         technology: "Docker",
@@ -115,7 +115,7 @@ export default new Vuex.Store({
       },
       {
         technology: "Jenkins",
-        percentage: 70
+        percentage: 65
       },
       {
         technology: "SQL Server",

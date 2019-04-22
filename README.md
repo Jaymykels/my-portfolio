@@ -55,6 +55,7 @@ cat ~/.ssh/id_rsa.pub
 nano ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 cat ~/.ssh/id_rsa
+docker login registry.gitlab.com
 ```
 Add private key and ip to gitlab variables as DEPLOY_SERVER_PRIVATE_KEY and DEPLOYMENT_SERVER_IP respectively
 
