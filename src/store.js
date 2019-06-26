@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     avatar: "/img/avatar.jpeg",
-    fullname: "Michael Ezeokoye",
+    fullname: "Chukwuemeka Michael Ezeokoye",
     DOB: "15th May 1993",
     occupation: "Software Engineer",
     years_experience: "5+",
@@ -16,16 +16,9 @@ export default new Vuex.Store({
     location: "Lagos",
     nationality: "Nigerian",
     resume:
-      "https://www.dropbox.com/s/bfqn530eiu49tqn/Michael%20Ezeokoye.pdf?dl=0",
+      "https://www.dropbox.com/s/epdxwhye1uy91lm/Michael%20Ezeokoye%20Resume.pdf?dl=0",
     contract: ["Trace Media", "Folio Media Group", "Stears"],
-    skills: [
-      "Requirement Analysis",
-      "System Architecture",
-      "Project Management",
-      "Programming",
-      "Dev Ops",
-      "Quality Assurance"
-    ],
+    skills: ["Java", "PHP", "JavaScript", "Python"],
     professional_experience: [
       {
         period: "2018 - PRESENT",
@@ -56,21 +49,21 @@ export default new Vuex.Store({
         degree: "BACHELORS DEGREE",
         summary:
           "Graduated from the department of Computer Science University of Ibadan."
-      },
-      {
-        period: "2014 - 2015",
-        institution: "EAC",
-        degree: "CAMBRIDGE A LEVELS CERTIFICATE",
-        summary:
-          "Completed the Cambridge A Level examination of Mathemetics, Physics and Chemistry."
-      },
-      {
-        period: "2006 - 2009",
-        institution: "SAINT MARYS COLLEGE",
-        degree: "WASSCE / SSCE",
-        summary:
-          "Completed the West African Senior Secondary School O Level Certificate examination as a science student."
       }
+      // {
+      //   period: "2014 - 2015",
+      //   institution: "EAC",
+      //   degree: "CAMBRIDGE A LEVELS CERTIFICATE",
+      //   summary:
+      //     "Completed the Cambridge A Level examination of Mathemetics, Physics and Chemistry."
+      // },
+      // {
+      //   period: "2006 - 2009",
+      //   institution: "SAINT MARYS COLLEGE",
+      //   degree: "WASSCE / SSCE",
+      //   summary:
+      //     "Completed the West African Senior Secondary School O Level Certificate examination as a science student."
+      // }
     ],
     technical_skills: [
       {
@@ -79,10 +72,6 @@ export default new Vuex.Store({
       },
       {
         technology: "Vue",
-        percentage: 95
-      },
-      {
-        technology: "Express",
         percentage: 95
       },
       {
@@ -118,7 +107,7 @@ export default new Vuex.Store({
         percentage: 65
       },
       {
-        technology: "SQL Server",
+        technology: "Visual Paradigm",
         percentage: 60
       },
       {
@@ -130,7 +119,7 @@ export default new Vuex.Store({
         percentage: 70
       },
       {
-        technology: "Gitlab",
+        technology: "Gitlab CI",
         percentage: 70
       }
     ],

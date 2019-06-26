@@ -36,9 +36,9 @@
 
       <services :services="skills" />
 
-      <experience :professional_experience="professional_experience" />
+      <!-- <experience :professional_experience="professional_experience" /> -->
 
-      <education :education="education" />
+      <!-- <education :education="education" /> -->
 
       <skills :technical_skills="technical_skills" />
 

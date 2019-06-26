@@ -41,8 +41,8 @@
           <ul class="nav navbar-nav text-center text-small text-uppercase">
             <li class="page-scroll"><a href="#home">Home</a></li>
             <li class="page-scroll"><a href="#profile">Profile</a></li>
-            <li class="page-scroll"><a href="#work-experiences">Resume</a></li>
-            <li class="page-scroll"><a href="#skills-bar-chart">Skills</a></li>
+            <!-- <li class="page-scroll"><a href="#work-experiences">Resume</a></li> -->
+            <li class="page-scroll"><a href="#services">Skills</a></li>
             <li class="page-scroll"><a href="#contact">Contact</a></li>
           </ul>
 

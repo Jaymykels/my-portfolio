@@ -9,7 +9,7 @@
               <h2
                 class="font-weight-700 has-sideline letter-spacing-1 text-medium text-uppercase"
               >
-                Technical Skills
+                Technical Tools
               </h2>
             </div>
           </div>

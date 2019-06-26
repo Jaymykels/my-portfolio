@@ -8,7 +8,7 @@
               <h2
                 class="font-weight-700 has-sideline letter-spacing-1 text-medium text-uppercase"
               >
-                What Can I Do
+                Stack
               </h2>
             </div>
             <div

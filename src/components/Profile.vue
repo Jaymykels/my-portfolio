@@ -34,16 +34,21 @@
                     }}</span>
                   </li>
 
-                  <li>
+                  <!-- <li>
                     <label class="background-color text-white">Birthday</label>
                     <span class="font-family-alt text-medium">{{ DOB }}</span>
-                  </li>
+                  </li> -->
 
-                  <li>
+                  <!-- <li>
                     <label class="background-color text-white">Address</label>
                     <span class="font-family-alt text-medium">{{
                       address
                     }}</span>
+                  </li> -->
+
+                  <li>
+                    <label class="background-color text-white">Email</label>
+                    <span class="font-family-alt text-medium">{{ email }}</span>
                   </li>
 
                   <li>
@@ -51,11 +56,6 @@
                     <span class="font-family-alt text-medium">{{
                       mobile
                     }}</span>
-                  </li>
-
-                  <li>
-                    <label class="background-color text-white">Email</label>
-                    <span class="font-family-alt text-medium">{{ email }}</span>
                   </li>
 
                   <li>

@@ -47,7 +47,7 @@
                     </h3>
 
                     <div class="contact-detail clearfix">
-                      <div class="address pull-left">
+                      <!-- <div class="address pull-left">
                         <h4
                           class="font-weight-700 text-color text-medium text-uppercase"
                         >
@@ -59,9 +59,9 @@
                             {{ item }}
                           </li>
                         </ul>
-                      </div>
+                      </div> -->
 
-                      <div class="contact-info pull-right">
+                      <div class="contact-info">
                         <h4
                           class="font-weight-700 text-color text-medium text-uppercase"
                         >
