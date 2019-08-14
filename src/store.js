@@ -71,6 +71,10 @@ export default new Vuex.Store({
         percentage: 95
       },
       {
+        technology: "Node.js",
+        percentage: 95
+      },
+      {
         technology: "Vue",
         percentage: 95
       },
@@ -119,7 +123,7 @@ export default new Vuex.Store({
         percentage: 70
       },
       {
-        technology: "Gitlab CI",
+        technology: "Git",
         percentage: 70
       }
     ],
