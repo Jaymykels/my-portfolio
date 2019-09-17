@@ -16,7 +16,7 @@ export default new Vuex.Store({
     location: "Lagos",
     nationality: "Nigerian",
     resume:
-      "https://www.dropbox.com/s/epdxwhye1uy91lm/Michael%20Ezeokoye%20Resume.pdf?dl=0",
+      "https://docs.google.com/document/d/1nN7KqM8lQ_JsTkDrn3FcuGbjCMendx9KG_Vvm21ljjQ/edit",
     contract: ["Trace Media", "Folio Media Group", "Stears"],
     skills: ["Java", "PHP", "JavaScript", "Python"],
     professional_experience: [
@@ -80,7 +80,7 @@ export default new Vuex.Store({
       },
       {
         technology: "Ionic",
-        percentage: 75
+        percentage: 70
       },
       {
         technology: "Angular",
@@ -92,11 +92,11 @@ export default new Vuex.Store({
       },
       {
         technology: "Spring Boot",
-        percentage: 50
+        percentage: 80
       },
       {
         technology: "Django",
-        percentage: 60
+        percentage: 50
       },
       {
         technology: "Docker",
@@ -124,7 +124,7 @@ export default new Vuex.Store({
       },
       {
         technology: "Git",
-        percentage: 70
+        percentage: 90
       }
     ],
     projects: [
