@@ -12,7 +12,7 @@ export default new Vuex.Store({
     years_experience: "5+",
     mobile: "+234 708 038 7486",
     email: "jaymykels69@gmail.com",
-    address: "Mobil Road Off Ilaje, Ajah Lagos",
+    address: "Ajah",
     location: "Lagos",
     nationality: "Nigerian",
     resume:
@@ -50,20 +50,6 @@ export default new Vuex.Store({
         summary:
           "Graduated from the department of Computer Science University of Ibadan."
       }
-      // {
-      //   period: "2014 - 2015",
-      //   institution: "EAC",
-      //   degree: "CAMBRIDGE A LEVELS CERTIFICATE",
-      //   summary:
-      //     "Completed the Cambridge A Level examination of Mathemetics, Physics and Chemistry."
-      // },
-      // {
-      //   period: "2006 - 2009",
-      //   institution: "SAINT MARYS COLLEGE",
-      //   degree: "WASSCE / SSCE",
-      //   summary:
-      //     "Completed the West African Senior Secondary School O Level Certificate examination as a science student."
-      // }
     ],
     technical_skills: [
       {
