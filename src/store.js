@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    avatar: "/img/avatar.jpeg",
+    avatar: "/my-portfolio/img/avatar.jpeg",
     fullname: "Chukwuemeka Michael Ezeokoye",
     DOB: "15th May 1993",
     occupation: "Software Engineer",
@@ -116,28 +116,28 @@ export default new Vuex.Store({
     projects: [
       {
         title: "STEARS ELECTION CENTER",
-        image: "/img/projects/stears.png",
+        image: "/my-portfolio/img/projects/stears.png",
         description:
           "A platform that gives insight into the Nigeria Elections conducted by the Independent National Electoral Commission of Nigeria.",
         link: "https://nigeriaelections.stearsng.com"
       },
       {
         title: "FOODLOCKER",
-        image: "/img/projects/foodlocker.png",
+        image: "/my-portfolio/img/projects/foodlocker.png",
         description:
           "AN E-commerce web application with an Inventory management system an POS for a Food Mart.",
         link: "https://www.foodlocker.com.ng"
       },
       {
         title: "UNIVERSITY DSS (PROTOTYPE)",
-        image: "/img/projects/dsssapa.png",
+        image: "/my-portfolio/img/projects/dsssapa.png",
         description:
           "A decission support system for student academics performace analytics that processes academic result and predicts academic performance.",
         link: "https://dsssapa.herokuapp.com"
       },
       {
         title: "FOLIO NEWS (PROTOTYPE)",
-        image: "/img/projects/folio.png",
+        image: "/my-portfolio/img/projects/folio.png",
         description:
           "A platform that keeps you updates with the latest news around with video content and advertisement.",
         link: "http://folio.techbrarysolutions.com"
