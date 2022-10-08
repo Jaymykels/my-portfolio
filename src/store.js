@@ -15,8 +15,7 @@ export default new Vuex.Store({
     address: "Ajah",
     location: "Lagos",
     nationality: "Nigerian",
-    resume:
-      "https://docs.google.com/document/d/1nN7KqM8lQ_JsTkDrn3FcuGbjCMendx9KG_Vvm21ljjQ/edit",
+    resume: "",
     contract: ["Trace Media", "Folio Media Group", "Stears"],
     skills: ["Java", "PHP", "JavaScript", "Python"],
     professional_experience: [
